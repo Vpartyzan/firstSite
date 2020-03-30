@@ -1,0 +1,231 @@
+body {
+    background:  rgb(255, 255, 255);
+}
+
+body, p, div, a {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+section {
+    height: 100vh;
+}
+
+.title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 53px;
+    text-align: center;
+}
+
+.subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.white {
+    color: white;
+}
+
+.black {
+    color: #000000;
+}
+
+/* Header */
+header {
+    border-bottom: 1px solid #a1a1a1;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: none;
+    z-index: 10;
+}
+
+header.scrolling {
+    background: #ffffff;
+    box-shadow: 0 2px 20px 0px grey;
+    
+}
+
+header .container {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-link {
+    height: 98%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-link a {
+    color: #ffffff;
+}
+
+header.scrolling .menu-link a {
+    color: #000000;
+}
+
+.menu-link.active {
+    border-bottom: 2px solid #ffffff;
+}
+
+header.scrolling .menu-link.active {
+    border-bottom: 2px solid #000000;
+}
+
+/* Home */
+
+#home {
+    background: url(../img/Rectangle.png) no-repeat center center fixed;
+    background-size: cover;
+}
+
+#home .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 830px;
+}
+
+.home-subtitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.home-btn {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/*project*/
+
+#project {
+    background: #ffffff;
+    
+}
+
+#project .container4 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    color: #a1a1a1;
+    max-width: 830px;
+}
+
+.project-subtitle {
+    font-style: normal;
+    font-weight: 500px;
+    font-size: 36px;
+    line-height: 53px;
+    text-align: center;
+    color: #000000;
+}
+
+.project-img {
+    display: flex;
+    align-items: center;
+    width: 255px;
+    height: 255px;     
+}
+
+
+.project-img img {
+    width: 70%;
+    padding: 15px;    
+}
+
+
+
+/* VIDEOS */
+#video {
+    background: url(../img/Rectangle.png) no-repeat center center;
+    background-size: cover;
+    height: 446px;
+}
+
+.works-content{
+    max-width: 970px;
+    position: relative;
+    margin: auto;
+}
+
+video {
+    display: none;
+}
+
+.video-play{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.video-play a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    color: #FFFFFF;
+    padding: 20px 40px;
+    border: 1px solid white;
+    border-radius: 33px;
+    cursor: pointer;
+}
+
+.video-play a:hover {
+    background: #ffffff;
+    color: black;
+    box-shadow: 0px 2px 0px 0px grey;
+}
