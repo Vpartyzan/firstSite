@@ -79,6 +79,9 @@ header .container {
 
 .menu-link a {
     color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 header.scrolling .menu-link a {
@@ -126,13 +129,14 @@ header.scrolling .menu-link.active {
     color: #ffffff;
 }
 
-.home-btn {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    color: #ffffff;
+.home-btn, .project-btn {
+    width: 200px;
+    color: white;
+    background: #4985FF;
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+    border-radius: 33px;
+    padding: 15px 36px;
+    cursor: pointer;    
 }
 
 /*project*/
@@ -228,4 +232,108 @@ video {
     background: #ffffff;
     color: black;
     box-shadow: 0px 2px 0px 0px grey;
+}
+
+/* email */
+
+.email .container {
+    border-top: 1px solid #e0e0e0e0;
+    padding: 85px 0;
+}
+
+.email .title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+    padding-bottom: 20px;
+}
+
+.email .subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    color: #999999;
+    padding-bottom: 30px;
+}
+
+.email-footer {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    text-align: center;
+    color: #999999;
+}
+
+.email-content {
+    width: 490px;
+    margin: auto auto 35px;
+    display: flex;
+    justify-content: center;
+    border-radius: 33px;
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+    position: relative;
+}
+
+.email-content input {
+    background: none;
+    padding: 15px 33px 13px;
+    border: 1px solid #F2F2F2;
+    width: 60%;
+    border-radius: 33px 0 0 33px;
+}
+
+.email-content button {
+    background: #4985FF;
+    border: 1px solid #4985FF;
+    padding: 15px 36px 13px 26px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 40%;
+    border-radius: 0 33px 33px 0;
+}
+
+::placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    color: #999999;
+}
+
+.error {
+    position: absolute;
+    left: 33px;
+    bottom: -20px;
+    color: red;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: none;
+}
+
+
+/* media */
+
+@media all and (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media all and (max-width: 900px) {
+    header .container {
+        justify-content: center;
+    }
+
+    .menu {
+        width: 80%;
+    }
 }

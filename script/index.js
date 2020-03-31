@@ -1,5 +1,31 @@
 document.addEventListener("DOMContentLoaded", function() {
     
+    //flow scroll
+    const links = document.querySelectorAll('header a[href*="#"]');
+
+    function cleanActiveLinks(){                                                     //удаляет актівность всех ссылок
+        const parentsLinks = document.getElementsByClassName("menu-link");
+        for (let parent of parentsLinks){
+            parent.classList.remove('active');
+        }
+    }
+
+    document.addEventListener('wheel', cleanActiveLinks);
+
+    for (let link of links) {
+        console.log(link);
+        link.addEventListener('click', function(event) {
+            event.preventDefault();                                     // отменяет стандартное поведеніе элемента
+            const id = link.getAttribute('href').substr(1);
+            document.getElementById(id).scrollIntoView({
+                block: 'center', 
+                behavior: 'smooth'
+            });
+            cleanActiveLinks();
+            event.target.closest('div').classList.add('active');
+        });
+    }
+    
     function changeHeader() {
         console.log("Scrolling", window.scrollY);
         let headerClasses = document.getElementsByTagName("header")[0].classList;
@@ -37,5 +63,35 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     videoElement.addEventListener('ended', myHandler, false);
+
+    //email
+    function validEmail(value){
+        const isValidEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(event.target.value);
+        let errorElement = document.getElementsByClassName('error')[0];
+            if (!isValidEmail) {
+                errorElement.style.display = 'block';
+            } else {
+                errorElement.style.display = 'none';
+            }
+            return isVslidEmail;    
+    }
+    
+    let emailInput = document.getElementsByTagName("input")[0];
+
+    if (emailInput){
+        emailInput.addEventListener('input', function(event){
+            validEmail(event.target.value);
+        });
+    }
+
+    let emailButton = document.querySelectorAll('.email-content button')[0];
+    if (emailButton){
+        emailButton.addEventListener('click', function(){
+            const isValidEmail = validEmail(emailInput.value);
+            if (isValidEmail){
+                //request to server
+            }
+        });
+    }
 });
 
