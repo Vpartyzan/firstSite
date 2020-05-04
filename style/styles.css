@@ -2,6 +2,19 @@ body {
     background:  rgb(255, 255, 255);
 }
 
+ul {
+    padding-inline-start: 0px;
+}
+
+li {
+    padding: 5px;
+    list-style-type: none;
+}
+
+li::before {
+    content: "-  ";
+}
+
 body, p, div, a {
     margin: 0;
     padding: 0;
@@ -129,7 +142,7 @@ header.scrolling .menu-link.active {
     color: #ffffff;
 }
 
-.home-btn, .project-btn {
+.home-btn, .project-btn, .services-btn {
     width: 200px;
     color: white;
     background: #4985FF;
@@ -139,11 +152,49 @@ header.scrolling .menu-link.active {
     cursor: pointer;    
 }
 
+/*services*/
+
+#services .gr{
+    height: 100%;
+    padding-block-start: 300px;
+    display: grid;
+    grid-template-rows: 460px 0fr;
+    grid-template-columns: 1fr 1fr;
+    /*justify-content: center;
+    align-items: center;*/
+}
+
+.services-subtitle {
+    font-style: normal;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: inherit;
+    margin-block-start: 100px;
+    margin-block-end: 20px;
+    color: #000000;
+}
+
+.services-title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: inherit;
+    color: #a1a1a1;
+}
+
+.services-img {
+    display: flex;
+    align-items: center;
+    width: 255px;
+    height: 255px; 
+}
+
+
 /*project*/
 
 #project {
-    background: #ffffff;
-    
+    background-color: #e0e0e0e0;    
 }
 
 #project .container4 {
@@ -189,15 +240,20 @@ header.scrolling .menu-link.active {
 
 /* VIDEOS */
 #video {
+    height: 68vh;
+}
+
+.container-video{
     background: url(../img/Rectangle.png) no-repeat center center;
     background-size: cover;
-    height: 446px;
+    height: 500px;
 }
 
 .works-content{
     max-width: 970px;
     position: relative;
     margin: auto;
+    top: 60px;
 }
 
 video {
@@ -239,6 +295,10 @@ video {
 .email .container {
     border-top: 1px solid #e0e0e0e0;
     padding: 85px 0;
+}
+
+.email{
+    height: 320px;
 }
 
 .email .title {
@@ -299,6 +359,7 @@ video {
     color: #FFFFFF;
     width: 40%;
     border-radius: 0 33px 33px 0;
+    cursor: pointer;
 }
 
 ::placeholder {
@@ -318,6 +379,41 @@ video {
     letter-spacing: 1px;
     display: none;
 }
+
+
+/*footer*/
+
+.footer {
+    background: #e0e0e0e0;
+    padding: 20px;
+}
+
+.contacts ::before {    
+    content: none;
+}
+
+.footer-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.footer-menu li {
+    color: gray;
+}
+
+.mail {
+    background: url('../img/footer/Vector-mail.png') no-repeat 0 4px;    
+    padding-left: 24px;
+}
+
+
+.phone {
+    background: url('../img/footer/Vector-phone.png') no-repeat 0 4px;
+    padding-left: 24px;
+}
+
 
 
 /* media */

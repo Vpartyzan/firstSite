@@ -26,8 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
     
-    function changeHeader() {
-        console.log("Scrolling", window.scrollY);
+    function changeHeader() {        
         let headerClasses = document.getElementsByTagName("header")[0].classList;
         if (window.scrollY >0){
             let isHeaderHasClass = headerClasses.contains("scrolling");
