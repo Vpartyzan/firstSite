@@ -154,14 +154,20 @@ header.scrolling .menu-link.active {
 
 /*services*/
 
-#services .gr{
+#services .container {
     height: 100%;
-    padding-block-start: 300px;
-    display: grid;
-    grid-template-rows: 460px 0fr;
-    grid-template-columns: 1fr 1fr;
-    /*justify-content: center;
-    align-items: center;*/
+    display: flex;    
+}
+
+.services-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.s {
+    display: inline-flex;
 }
 
 .services-subtitle {
